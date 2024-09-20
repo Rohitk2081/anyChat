@@ -1,0 +1,103 @@
+/* Ensure full height layout */
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #f8f9fa; /* Light grey background */
+}
+
+/* Chat Container Styling */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 80vh; /* Set height to 80% of viewport */
+    width: 80vw; /* Set width to 80% of viewport */
+    max-width: 600px; /* Maximum width to maintain square shape */
+    margin: auto; /* Center the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    overflow: hidden; /* Hide overflow for rounded corners */
+}
+
+/* Chat Header Styling */
+#chat-header {
+    background-color: #4ba0fb; /* Bootstrap blue */
+    color: white;
+    padding: 10px;
+    text-align: center; 
+}
+
+/* Chat Box Styling */
+#chat-box {
+    flex-grow: 1;
+    background-color: #ffffff; /* White background for chat */
+    border: 2px solid #007bff;
+    padding: 20px;
+    overflow-y: auto; /* Scroll chat messages when overflow */
+}
+
+/* Input Container (fixed at the bottom) */
+#input-container {
+    display: flex;
+    background-color: #f8f9fa; /* Light background */
+    border-top: 2px solid #007bff; /* Top border */
+    padding: 10px;
+}
+
+/* Input and Button Styles */
+#chat-input {
+    flex-grow: 1;
+}
+
+#send-btn {
+    background-color: #28a745; /* Green for send button */
+}
+
+#skip-btn {
+    background-color: #ffc107; /* Yellow for skip button */
+}
+
+/* Message Container */
+.message-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.message-container p {
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px 0;
+    max-width: 60%;
+    word-wrap: break-word;
+}
+
+.message-container p.you {
+    background-color: #d3f9d8; /* Light green for your messages */
+    color: blue; /* Text color for user's messages */
+    align-self: flex-end;
+}
+
+.message-container p.stranger {
+    background-color: #f1f1f1; /* Light gray for stranger messages */
+    color: red; /* Text color for stranger's messages */
+    align-self: flex-start;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .chat-container {
+        width: 95vw; /* Use 95% of the screen on mobile */
+    }
+
+    #chat-box {
+        padding: 10px;
+    }
+
+    #chat-input {
+        font-size: 14px;
+    }
+
+    #send-btn, #skip-btn {
+        padding: 5px 10px;
+    }
+}
